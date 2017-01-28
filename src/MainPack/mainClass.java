@@ -1,5 +1,6 @@
 package MainPack;
 //here is a comment to test the .gitignore
+//here is another comment to test the .gitignore
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
