@@ -25,12 +25,12 @@ public class mainClass {
 //		deleteTimeStamp("Corpus.txt","CorpusNew.txt");
 //		System.exit(0);
 		setTimeStart();
-		WordMachine aWordMachine = new WordMachine();
+		WordMachine aWordMachine = new WordMachine();//嘿咻注意啦注意啦我要开一个文字处理机了大家看好了
 		aWordMachine.setFile("TestOfCorpus.txt", "MiniFmm.txt", "Corpus.txt");
-//		aWordMachine.initialCorpus();
+		aWordMachine.initialCorpus();
 //		System.out.println(aWordMachine.aCorpus.getWordTrieMaxLength());
 //		System.out.println(aWordMachine.aCorpus.wordTrie.MaxString);
-//		aWordMachine.Fmm();
+		aWordMachine.Fmm();
 		aWordMachine.checkAccuracy("StandardAnswer.txt");
 //		aWordMachine.Bmm();
 		
