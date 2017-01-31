@@ -205,15 +205,16 @@ public class WordMachine {
 				cursor += loopLen;//光标向后移动
 			}
 			sentence.delete(0, sentence.length());
-			ArrayList<String> speechOfEachWord = Veterbi(wordArray);
-			if (speechOfEachWord == null) {
-				continue;
-			}
+//			ArrayList<String> speechOfEachWord = Veterbi(wordArray);
+//			if (speechOfEachWord == null) {
+//				continue;
+//			}
 			int size = wordArray.size();
 			for (int i = 0; i < size; i ++) {
 				fwriter.write(wordArray.get(i));
-				fwriter.write("/");
-				fwriter.write(speechOfEachWord.get(i) + "  ");
+//				fwriter.write("/");
+//				fwriter.write(speechOfEachWord.get(i));
+				fwriter.write("  ");
 			}
 			
 			wordArray.clear();
@@ -296,7 +297,8 @@ public class WordMachine {
 		fwriter.close();
 	}
 	public void checkAccuracy(String AnswerFile) throws IOException {
-		ResultFile = new String("FmmTestOfCorpus.txt");
+//		ResultFile = new String("FmmTestOfCorpus.txt");
+		ResultFile = new String("Fmm" + TargetFile);
 		BufferedReader inputAns = new BufferedReader(new FileReader(AnswerFile));
 		BufferedReader inputRes = new BufferedReader(new FileReader(ResultFile));
 		int nextAnswerSentenceFlag = 1, nextResultSentenceFlag = 1;
