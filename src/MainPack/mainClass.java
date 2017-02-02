@@ -34,8 +34,8 @@ public class mainClass {
 		WordMachine aWordMachine = new WordMachine();//嘿咻注意啦注意啦我要开一个文字处理机了大家看好了
 		aWordMachine.setFile("TestOfCorpus.txt", "MiniFmm.txt", "Corpus.txt");
 		aWordMachine.initialCorpus();
-		System.out.println("flag");
-		aWordMachine.HMMOfSepAndPOS();
+//		System.out.println("flag");
+//		aWordMachine.HMMOfSepAndPOS();
 		aWordMachine.Fmm();
 		aWordMachine.checkAccuracy("Fmm","StandardAnswerOfSpeech.txt");
 //		aWordMachine.Bmm();
