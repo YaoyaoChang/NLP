@@ -1,3 +1,6 @@
-*.class
-/MainPack/
 /WordMachine/
+/MainPack/
+/WordInfo/
+/Trie/
+/CorpusMachine/
+/PartOfSpeech/

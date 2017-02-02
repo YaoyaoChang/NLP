@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import Trie.*;
 import PartOfSpeech.*;
 
+/**
+ * 这是一个神奇的语料库。
+ * 包含Trie树，可以高效查找单词。
+ * 包含词性对应信息。
+ */
 public class Corpus {
 	public Trie wordTrie = new Trie();
 	public Speech aSpeech = new Speech();
@@ -17,12 +22,27 @@ public class Corpus {
 	public int getCorpusSum() {
 		return CorpusSum;
 	}
-	public void addNewWord(String word,Integer wordId) {
+	/**
+	 * 向语料库中添加新单词
+	 * @param String word
+	 * @param int wordId
+	 */
+	public void addNewWord(String word,int wordId) {
 		wordTrie.insert(word, wordId);
 	}
+	/**
+	 * 对于旧单词，增加新词性
+	 * @param String aWord
+	 * @param int aSpeechID
+	 */
 	public void addSpeechOfWord(String aWord, int aSpeechID) {
 		wordTrie.addSpeechOfWord(aWord, aSpeechID);
 	}
+	/**
+	 * 查找单词，输入单词，返回词性信息
+	 * @param word
+	 * @return
+	 */
 	public ArrayList<SpeechOfWord> findWord(String word) {
 		return wordTrie.find(word);
 	}
@@ -36,6 +56,11 @@ public class Corpus {
 			return false;
 		}
 	}
+	/**
+	 * 初始化语料库，训练语料库模型，建立Trie树和Speech信息。
+	 * @param CorpusFile 语料库文件名
+	 * @throws IOException
+	 */
 	public void readCorpusFile(String CorpusFile) throws IOException{
 		BufferedReader input = new BufferedReader(new FileReader(CorpusFile));
 //		FileWriter fwriter = new FileWriter("TestOfCorpus.txt");//write a test.txt based on corpus.txt
